@@ -1,0 +1,6 @@
+framework module Pods_NewYorkSchoolsTest {
+  umbrella header "Pods-NewYorkSchoolsTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
