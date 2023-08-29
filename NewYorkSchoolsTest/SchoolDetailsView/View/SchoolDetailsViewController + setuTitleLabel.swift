@@ -10,6 +10,15 @@ import UIKit
 
 // MARK: - SetUp Title Label
 extension  SchoolDetailsViewController {
+    private enum Constants {
+        static let numberOfLines = 2
+        static let fontSize: CGFloat = 25.0
+        static let verticalSpacing: CGFloat = 10
+        static let horizontalSpacing: CGFloat = 10
+        static let titleRightSpacing: CGFloat = 50
+        static let titleHeight: CGFloat = 90
+        
+    }
     
     func setUpTitleLabel() {
         
@@ -17,8 +26,8 @@ extension  SchoolDetailsViewController {
         view.addSubview(titleLabel)
         
         // Decorators
-        titleLabel.font = .systemFont(ofSize: 25, weight: .bold)
-        titleLabel.numberOfLines = 2
+        titleLabel.font = .systemFont(ofSize: Constants.fontSize, weight: .bold)
+        titleLabel.numberOfLines = Constants.numberOfLines
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.textColor = Color.main
         
@@ -26,10 +35,10 @@ extension  SchoolDetailsViewController {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
-            titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
-            titleLabel.heightAnchor.constraint(equalToConstant: 90)
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constants.verticalSpacing),
+            titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Constants.horizontalSpacing),
+            titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.titleRightSpacing),
+            titleLabel.heightAnchor.constraint(equalToConstant: Constants.titleHeight)
         ])
     }
 }

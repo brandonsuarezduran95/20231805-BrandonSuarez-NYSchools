@@ -32,17 +32,17 @@ class HighSchoolCell: UITableViewCell {
         
         // Decorators
         title.text = "Placeholder"
-        title.font = .systemFont(ofSize: 18, weight: .light)
+        title.font = .systemFont(ofSize: Constants.fontSize, weight: .light)
         title.lineBreakMode = .byClipping
-        title.numberOfLines = 2
+        title.numberOfLines = Constants.numberOfLines
         
         // Constraints
         title.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            title.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
-            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            title.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -30)
+            title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.verticalSpacing),
+            title.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: Constants.horizontalSpacing),
+            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.verticalSpacing),
+            title.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -Constants.titleRightSpacing)
         ])
     }
     
@@ -61,9 +61,9 @@ class HighSchoolCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             arrowImage.centerYAnchor.constraint(equalTo: title.centerYAnchor),
-            arrowImage.heightAnchor.constraint(equalToConstant: 20),
-            arrowImage.leftAnchor.constraint(equalTo: title.rightAnchor, constant: 10),
-            arrowImage.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
+            arrowImage.heightAnchor.constraint(equalToConstant: Constants.imageHeight),
+            arrowImage.leftAnchor.constraint(equalTo: title.rightAnchor, constant: Constants.horizontalSpacing),
+            arrowImage.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -Constants.horizontalSpacing),
         ])
         
     }
@@ -72,5 +72,18 @@ class HighSchoolCell: UITableViewCell {
     
     func configure(title: String) {
         self.title.text = title
+    }
+}
+
+// MARK: - Constants
+
+extension HighSchoolCell {
+    private enum Constants {
+        static let fontSize: CGFloat = 18.0
+        static let numberOfLines: Int = 2
+        static let verticalSpacing: CGFloat = 10
+        static let horizontalSpacing: CGFloat = 10
+        static let titleRightSpacing: CGFloat = 30
+        static let imageHeight: CGFloat = 20
     }
 }

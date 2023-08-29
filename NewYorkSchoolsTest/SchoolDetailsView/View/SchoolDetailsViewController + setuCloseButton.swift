@@ -10,6 +10,11 @@ import UIKit
 extension SchoolDetailsViewController {
     // MARK: - SetUp Close Button
     
+    private enum Constants {
+        static let height: CGFloat = 30
+        static let verticalSpacing: CGFloat = 10
+    }
+    
     func setUpCloseButton() {
         // Adding the Button to the View
         view.addSubview(closeButton)
@@ -27,9 +32,9 @@ extension SchoolDetailsViewController {
         
         NSLayoutConstraint.activate([
             closeButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
-            closeButton.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: 10),
-            closeButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
-            closeButton.heightAnchor.constraint(equalToConstant: 30)
+            closeButton.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: Constants.verticalSpacing),
+            closeButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.verticalSpacing),
+            closeButton.heightAnchor.constraint(equalToConstant: Constants.height)
         ])
     }
     

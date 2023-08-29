@@ -36,7 +36,7 @@ class SatResultsCell: UITableViewCell {
         contentView.addSubview(resultImageView)
         
         // Decorators
-        resultImageView.layer.cornerRadius = 10
+        resultImageView.layer.cornerRadius = Constants.cornerRadius
         resultImageView.clipsToBounds = true
         resultImageView.backgroundColor = .lightGray
         
@@ -44,10 +44,10 @@ class SatResultsCell: UITableViewCell {
         resultImageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            resultImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            resultImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.verticalSpacing),
             resultImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            resultImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
-            resultImageView.widthAnchor.constraint(equalToConstant: 50)
+            resultImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.verticalSpacing),
+            resultImageView.widthAnchor.constraint(equalToConstant: Constants.imageWidth)
         ])
     }
     
@@ -58,16 +58,16 @@ class SatResultsCell: UITableViewCell {
         
         // Decorators
         titleLabel.text = "PlaceHolder"
-        titleLabel.font = .systemFont(ofSize: 20, weight: .regular)
+        titleLabel.font = .systemFont(ofSize: Constants.titleLabelFont, weight: .regular)
         
         // Constraint
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
-            titleLabel.leftAnchor.constraint(equalTo: resultImageView.rightAnchor, constant: 20),
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.verticalSpacing),
+            titleLabel.leftAnchor.constraint(equalTo: resultImageView.rightAnchor, constant: Constants.horizontalSpacing),
             titleLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            titleLabel.heightAnchor.constraint(equalToConstant: 20)
+            titleLabel.heightAnchor.constraint(equalToConstant: Constants.titleLabelHeight)
         ])
     }
     
@@ -78,16 +78,16 @@ class SatResultsCell: UITableViewCell {
         
         // Decorators
         resultLabel.text = "PlaceHolder B"
-        resultLabel.font = .systemFont(ofSize: 15, weight: .thin)
+        resultLabel.font = .systemFont(ofSize: Constants.resultLabelFontSize, weight: .thin)
         
         // Constraint
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            resultLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            resultLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.resultLabelTopSpacing),
             resultLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor),
             resultLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            resultLabel.heightAnchor.constraint(equalToConstant: 20)
+            resultLabel.heightAnchor.constraint(equalToConstant: Constants.titleLabelHeight)
         ])
     }
     
@@ -110,11 +110,31 @@ class SatResultsCell: UITableViewCell {
         resultImageView.addSubview(imageView)
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: resultImageView.topAnchor, constant: 5),
-            imageView.leftAnchor.constraint(equalTo: resultImageView.leftAnchor, constant: 5),
-            imageView.rightAnchor.constraint(equalTo: resultImageView.rightAnchor, constant: -5),
-            imageView.bottomAnchor.constraint(equalTo: resultImageView.bottomAnchor, constant: -5)
+            imageView.topAnchor.constraint(equalTo: resultImageView.topAnchor, constant: Constants.imageHorizontalSpacing),
+            imageView.leftAnchor.constraint(equalTo: resultImageView.leftAnchor, constant: Constants.imageVerticalSpacing),
+            imageView.rightAnchor.constraint(equalTo: resultImageView.rightAnchor, constant: -Constants.imageVerticalSpacing),
+            imageView.bottomAnchor.constraint(equalTo: resultImageView.bottomAnchor, constant: -Constants.imageHorizontalSpacing)
         ])
     }
 }
 
+// MARK: Constants
+extension SatResultsCell {
+    private enum Constants {
+        static let cornerRadius: CGFloat = 10
+        static let verticalSpacing: CGFloat = 20
+        static let horizontalSpacing: CGFloat = 20
+        
+        static let imageWidth: CGFloat = 50
+        
+        static let titleLabelFont: CGFloat = 20
+        static let titleLabelHeight: CGFloat = 20
+        
+        static let resultLabelFontSize: CGFloat = 15
+        static let resultLabelTopSpacing: CGFloat = 10
+        
+        static let imageVerticalSpacing: CGFloat = 5
+        static let imageHorizontalSpacing: CGFloat = 5
+        
+    }
+}

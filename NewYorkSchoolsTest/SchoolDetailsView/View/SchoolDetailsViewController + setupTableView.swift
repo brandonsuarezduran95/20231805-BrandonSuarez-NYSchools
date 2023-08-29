@@ -9,6 +9,12 @@ import UIKit
 
 extension SchoolDetailsViewController {
     // MARK: - SetUp tableView
+    private enum Constants {
+        static let rowHeigh: CGFloat = 90
+        static let verticalSpacing: CGFloat = 10
+        static let horizontalSpacing: CGFloat = 10
+        
+    }
     
     func setUpTableView() {
         // Adding to view hierarchy
@@ -16,7 +22,7 @@ extension SchoolDetailsViewController {
         
         // Decorators
         tableView.register(SatResultsCell.self, forCellReuseIdentifier: "SatResultsCell")
-        tableView.rowHeight = 90
+        tableView.rowHeight = Constants.rowHeigh
         
         // Delegates
         tableView.dataSource = self
@@ -26,9 +32,9 @@ extension SchoolDetailsViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 10),
-            tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
-            tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
+            tableView.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: Constants.verticalSpacing),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Constants.horizontalSpacing),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.horizontalSpacing),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
