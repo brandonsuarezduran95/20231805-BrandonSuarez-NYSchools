@@ -28,6 +28,13 @@
 		999EC09E2A1730EC003C127B /* Paperplane.json in Resources */ = {isa = PBXBuildFile; fileRef = 999EC09D2A1730EC003C127B /* Paperplane.json */; };
 		999EC0A02A1731FF003C127B /* ViewController + Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999EC09F2A1731FF003C127B /* ViewController + Animation.swift */; };
 		999EC0A82A173E0F003C127B /* NewYorkSchoolsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999EC0A72A173E0F003C127B /* NewYorkSchoolsUnitTests.swift */; };
+		99D15C612A9E432000649146 /* ViewController + setupTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D15C602A9E432000649146 /* ViewController + setupTableView.swift */; };
+		99D15C632A9E43AF00649146 /* ViewController + UITableViewDataSource + UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D15C622A9E43AF00649146 /* ViewController + UITableViewDataSource + UITableViewDelegate.swift */; };
+		99D15C652A9E455D00649146 /* SchoolDetailsViewController + setuTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D15C642A9E455D00649146 /* SchoolDetailsViewController + setuTitleLabel.swift */; };
+		99D15C672A9E45A200649146 /* SchoolDetailsViewController + setuCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D15C662A9E45A200649146 /* SchoolDetailsViewController + setuCloseButton.swift */; };
+		99D15C692A9E45FC00649146 /* SchoolDetailsViewController + setupInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D15C682A9E45FC00649146 /* SchoolDetailsViewController + setupInfoLabel.swift */; };
+		99D15C6B2A9E464A00649146 /* SchoolDetailsViewController + setupTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D15C6A2A9E464A00649146 /* SchoolDetailsViewController + setupTableView.swift */; };
+		99D15C6D2A9E469100649146 /* SchoolDetailsViewController + UITableViewDelegate + UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D15C6C2A9E469100649146 /* SchoolDetailsViewController + UITableViewDelegate + UITableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +72,13 @@
 		999EC09F2A1731FF003C127B /* ViewController + Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Animation.swift"; sourceTree = "<group>"; };
 		999EC0A52A173E0F003C127B /* NewYorkSchoolsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewYorkSchoolsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		999EC0A72A173E0F003C127B /* NewYorkSchoolsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkSchoolsUnitTests.swift; sourceTree = "<group>"; };
+		99D15C602A9E432000649146 /* ViewController + setupTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + setupTableView.swift"; sourceTree = "<group>"; };
+		99D15C622A9E43AF00649146 /* ViewController + UITableViewDataSource + UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + UITableViewDataSource + UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		99D15C642A9E455D00649146 /* SchoolDetailsViewController + setuTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchoolDetailsViewController + setuTitleLabel.swift"; sourceTree = "<group>"; };
+		99D15C662A9E45A200649146 /* SchoolDetailsViewController + setuCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchoolDetailsViewController + setuCloseButton.swift"; sourceTree = "<group>"; };
+		99D15C682A9E45FC00649146 /* SchoolDetailsViewController + setupInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchoolDetailsViewController + setupInfoLabel.swift"; sourceTree = "<group>"; };
+		99D15C6A2A9E464A00649146 /* SchoolDetailsViewController + setupTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchoolDetailsViewController + setupTableView.swift"; sourceTree = "<group>"; };
+		99D15C6C2A9E469100649146 /* SchoolDetailsViewController + UITableViewDelegate + UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchoolDetailsViewController + UITableViewDelegate + UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		AF064747CF386B5326128964 /* Pods_NewYorkSchoolsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewYorkSchoolsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C16519B8A4FA6149D48982 /* Pods-NewYorkSchoolsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkSchoolsTest.debug.xcconfig"; path = "Target Support Files/Pods-NewYorkSchoolsTest/Pods-NewYorkSchoolsTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +201,7 @@
 				9958F3F62A16B2BC00EF9385 /* ViewController + NetworkCall.swift */,
 				9958F3D82A169F0400EF9385 /* ViewController.swift */,
 				999EC09F2A1731FF003C127B /* ViewController + Animation.swift */,
+				99D15C622A9E43AF00649146 /* ViewController + UITableViewDataSource + UITableViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				9958F3FD2A16B4C000EF9385 /* HighSchoolsViewCell.swift */,
+				99D15C602A9E432000649146 /* ViewController + setupTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				9958F4012A16C49300EF9385 /* SchoolDetailsViewController.swift */,
+				99D15C6C2A9E469100649146 /* SchoolDetailsViewController + UITableViewDelegate + UITableViewDataSource.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,6 +237,10 @@
 			isa = PBXGroup;
 			children = (
 				9958F40B2A16F00500EF9385 /* SatResultsCell.swift */,
+				99D15C642A9E455D00649146 /* SchoolDetailsViewController + setuTitleLabel.swift */,
+				99D15C662A9E45A200649146 /* SchoolDetailsViewController + setuCloseButton.swift */,
+				99D15C682A9E45FC00649146 /* SchoolDetailsViewController + setupInfoLabel.swift */,
+				99D15C6A2A9E464A00649146 /* SchoolDetailsViewController + setupTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,8 +419,11 @@
 				9958F3F12A16A3DD00EF9385 /* School.swift in Sources */,
 				9958F3E92A169F3C00EF9385 /* NetworkManager.swift in Sources */,
 				9958F4102A17294C00EF9385 /* Color.swift in Sources */,
+				99D15C6B2A9E464A00649146 /* SchoolDetailsViewController + setupTableView.swift in Sources */,
 				9958F40C2A16F00500EF9385 /* SatResultsCell.swift in Sources */,
 				9958F3D92A169F0400EF9385 /* ViewController.swift in Sources */,
+				99D15C672A9E45A200649146 /* SchoolDetailsViewController + setuCloseButton.swift in Sources */,
+				99D15C632A9E43AF00649146 /* ViewController + UITableViewDataSource + UITableViewDelegate.swift in Sources */,
 				9958F3F52A16ADD900EF9385 /* NetworkService.swift in Sources */,
 				9958F3FE2A16B4C000EF9385 /* HighSchoolsViewCell.swift in Sources */,
 				9958F3F72A16B2BC00EF9385 /* ViewController + NetworkCall.swift in Sources */,
@@ -407,8 +431,12 @@
 				999EC0A02A1731FF003C127B /* ViewController + Animation.swift in Sources */,
 				9958F3D52A169F0400EF9385 /* AppDelegate.swift in Sources */,
 				9958F3EE2A16A14400EF9385 /* Urls.swift in Sources */,
+				99D15C652A9E455D00649146 /* SchoolDetailsViewController + setuTitleLabel.swift in Sources */,
 				9958F3D72A169F0400EF9385 /* SceneDelegate.swift in Sources */,
+				99D15C612A9E432000649146 /* ViewController + setupTableView.swift in Sources */,
+				99D15C692A9E45FC00649146 /* SchoolDetailsViewController + setupInfoLabel.swift in Sources */,
 				9958F3EC2A16A12300EF9385 /* NetworkError.swift in Sources */,
+				99D15C6D2A9E469100649146 /* SchoolDetailsViewController + UITableViewDelegate + UITableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

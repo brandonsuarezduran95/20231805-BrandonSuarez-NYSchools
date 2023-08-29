@@ -9,12 +9,13 @@ import XCTest
 @testable import NewYorkSchoolsTest
 
 final class NewYorkSchoolsUnitTests: XCTestCase {
+    
     var schoolData: [School] = []
     var satData: [SatResult] = []
     
     func testFetchSchoolData() {
         // Setting up the expectation
-        let expectation = self.expectation(description: "School Data Fetched")
+        let expectation = self.expectation(description: "SchoolDataFetched")
         // Mocking a fetch request
         NetworkService().fetchSchoolsData { result in
             switch result {
@@ -36,7 +37,7 @@ final class NewYorkSchoolsUnitTests: XCTestCase {
     
     func testFetchSatData() {
         // Setting up the expectation
-        let expectation = self.expectation(description: "Sat Data Fetched")
+        let expectation = self.expectation(description: "SatDataFetched")
         // Mocking a fetch request
         NetworkService().fetchSatData { result in
             switch result {
